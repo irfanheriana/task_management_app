@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:task_management_app/app/routes/app_pages.dart';
+import 'package:task_management_app/app/utils/style/AppColors.dart';
 
 class SideBar extends StatelessWidget {
   const SideBar({
@@ -16,7 +17,7 @@ class SideBar extends StatelessWidget {
       child: Container(
         height: Get.height,
         padding: const EdgeInsets.only(top: 30),
-        color: Colors.blue[100],
+        color: AppColors.primaryBg,
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -83,14 +84,14 @@ class SideBar extends StatelessWidget {
                               Get.currentRoute == '/task' 
                               ? Ionicons.cube 
                               : Ionicons.cube_outline, 
-                              color: Colors.grey, 
+                              color: AppColors.primaryText, 
                               size: 30,),
                           ),
                           const SizedBox(height: 5,),
                           const Text("Task", 
                           style: 
                           const TextStyle(
-                            color: Colors.grey, 
+                            color: AppColors.primaryText, 
                             fontSize: 16),),
                           ]),
                            onTap: ()=>Get.toNamed(Routes.TASK),
