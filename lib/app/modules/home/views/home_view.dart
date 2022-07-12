@@ -8,6 +8,7 @@ import 'package:task_management_app/app/utils/style/AppColors.dart';
 import 'package:task_management_app/app/utils/widget/header.dart';
 import 'package:task_management_app/app/utils/widget/sidebar.dart';
 
+import '../../../utils/widget/myfriends.dart';
 import '../../../utils/widget/upcomingtask.dart';
 import '../controllers/home_controller.dart';
 
@@ -340,44 +341,16 @@ class HomeView extends GetView<HomeController> {
                           ],
                         ),
                       ),
-                        Expanded(
+                        !context.isPhone? Expanded(
                           child: Row(
-                            children: [
-                              const UpcomingTask(),
-                              Expanded(
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        const Text('My Friends', 
-                                        style: TextStyle(
-                                        color: AppColors.primaryText, 
-                                        fontSize: 30),
-                                        ),
-                                        const Text('More', 
-                                        style: TextStyle(
-                                        color: AppColors.primaryText, 
-                                        fontSize: 30),
-                                        ),
-                                        Icon(
-                                          Ionicons.arrow_forward, 
-                                          color: AppColors.primaryText,
-                                          ),
-                                      ],
-                                    ),
-                                    SizedBox(
-                                    height: 20,
-                                    ),
-                                  ],
-                                ),
-                              ),
+                            children: const [
+                              UpcomingTask(),
+                              MyFriends(),
                               
                             ],
                           ),
-                        ),
-                        
-                        ],
-                      ),
+                        ):const UpcomingTask(),
+                        ]),
       
                 ))
               ]),
