@@ -73,10 +73,11 @@ class header extends StatelessWidget {
                    SizedBox(
                 width: 5,
               ),
+               Icon(Ionicons.log_out_outline, color: Colors.grey,), 
              ],
            ),
         ),
-         Icon(Ionicons.log_out_outline, color: Colors.grey,),                    
+                           
         ]),
     ),
               );

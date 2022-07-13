@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:task_management_app/app/utils/style/AppColors.dart';
 import 'package:task_management_app/app/utils/widget/header.dart';
+import 'package:task_management_app/app/utils/widget/mytask.dart';
 import 'package:task_management_app/app/utils/widget/sidebar.dart';
 
 import '../../../utils/widget/myfriends.dart';
@@ -69,8 +70,9 @@ class HomeView extends GetView<HomeController> {
               const SizedBox(
                 width: 15,
                 ),
-            ClipRRect(borderRadius: BorderRadius.circular(30),
-            child: const CircleAvatar(
+            ClipRRect(
+              borderRadius: BorderRadius.circular(30),
+              child: const CircleAvatar(
               backgroundColor: Colors.amber, 
               radius: 25, 
               foregroundImage: NetworkImage('assets/images/person2.jpg'),
@@ -98,8 +100,9 @@ class HomeView extends GetView<HomeController> {
                         height: Get.height * 0.38,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text('My Task', 
+                          children: const [
+                            Text(
+                            'My Task', 
                             style: TextStyle(
                               color: AppColors.primaryText, 
                               fontSize: 30,
@@ -109,234 +112,7 @@ class HomeView extends GetView<HomeController> {
                           height: 20,
                         ),
                         // my task
-                        SizedBox(
-                          height: 200,
-                          child: ListView(
-                            clipBehavior: Clip.antiAlias,
-                            scrollDirection: Axis.horizontal, 
-                            shrinkWrap: true,
-                            children: [
-                              Container(
-                                width: 400,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: AppColors.secondaryBg
-                                  ),
-                                  margin: const EdgeInsets.all(10),
-                                  padding: const EdgeInsets.all(20),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                    Row(
-                                      children: [
-                                        ClipRRect(borderRadius: BorderRadius.circular(25),
-                                          child: const CircleAvatar(
-                                          backgroundColor: Colors.amber, 
-                                          radius: 25, 
-                                         foregroundImage: NetworkImage('assets/images/person2.jpg'),
-                                        ),
-                                   ),
-      
-                                   ClipRRect(borderRadius: BorderRadius.circular(25),
-                                      child: const CircleAvatar(
-                                      backgroundColor: Colors.amber, 
-                                      radius: 25, 
-                                     foregroundImage: NetworkImage('assets/images/person2.jpg'),
-                                    ),
-                                   ),
-                                   const Spacer(),
-                                   Container(
-                                     height: 25,
-                                     width: 80,
-                                     color: AppColors.primaryBg,
-                                     child: Center(
-                                       child: Text(
-                                         '100%',
-                                         style: TextStyle(
-                                         color: AppColors.primaryText, 
-                                         ),
-                                     ),
-                                    ),
-                                   ),
-                                      ],
-                                    ),
-                                    const Spacer(),
-                                  Container(
-                                     height: 25,
-                                     width: 80,
-                                     color: AppColors.primaryBg,
-                                     child: Center(
-                                       child: Text(
-                                         '10/10 Task',
-                                         style: TextStyle(
-                                         color: AppColors.primaryText, 
-                                          ),
-                                        ),
-                                      ),
-                                   ),
-                                   Text(
-                                   'Mobile Programming', 
-                                   style: TextStyle(
-                                     color: AppColors.primaryText, 
-                                     fontSize: 20),
-                                     ),
-                                     Text(
-                                   'Deadline 2 hari lagi', 
-                                   style: TextStyle(
-                                     color: AppColors.primaryText, 
-                                     fontSize: 15),
-                                     ),
-                                  ],),
-                              ),
-      
-                              Container(
-                                width: 400,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: AppColors.secondaryBg
-                                  ),
-                                  margin: const EdgeInsets.all(10),
-                                  padding: EdgeInsets.all(20),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                    Row(
-                                      children: [
-                                        ClipRRect(borderRadius: BorderRadius.circular(25),
-                                          child: const CircleAvatar(
-                                          backgroundColor: Colors.amber, 
-                                          radius: 25, 
-                                         foregroundImage: NetworkImage('assets/images/person2.jpg'),
-                                        ),
-                                   ),
-      
-                                   ClipRRect(borderRadius: BorderRadius.circular(25),
-                                      child: const CircleAvatar(
-                                      backgroundColor: Colors.amber, 
-                                      radius: 25, 
-                                     foregroundImage: NetworkImage('assets/images/person2.jpg'),
-                                    ),
-                                   ),
-                                   const Spacer(),
-                                   Container(
-                                     height: 25,
-                                     width: 80,
-                                     color: AppColors.primaryBg,
-                                     child: Center(
-                                       child: Text(
-                                         '100%',
-                                         style: TextStyle(
-                                         color: AppColors.primaryText, 
-                                         ),
-                                     ),
-                                    ),
-                                   ),
-                                      ],
-                                    ),
-                                    const Spacer(),
-                                  Container(
-                                     height: 25,
-                                     width: 80,
-                                     color: AppColors.primaryBg,
-                                     child: Center(
-                                       child: Text(
-                                         '10/10 Task',
-                                         style: TextStyle(
-                                         color: AppColors.primaryText, 
-                                          ),
-                                        ),
-                                      ),
-                                   ),
-                                   Text(
-                                   'Mobile Programming', 
-                                   style: TextStyle(
-                                     color: AppColors.primaryText, 
-                                     fontSize: 20),
-                                     ),
-                                     Text(
-                                   'Deadline 2 hari lagi', 
-                                   style: TextStyle(
-                                     color: AppColors.primaryText, 
-                                     fontSize: 15),
-                                     ),
-                                  ],),
-                              ),
-      
-                              Container(
-                                width: 400,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: AppColors.secondaryBg
-                                  ),
-                                  margin: const EdgeInsets.all(10),
-                                  padding: EdgeInsets.all(20),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                    Row(
-                                      children: [
-                                        ClipRRect(borderRadius: BorderRadius.circular(25),
-                                          child: const CircleAvatar(
-                                          backgroundColor: Colors.amber, 
-                                          radius: 25, 
-                                         foregroundImage: NetworkImage('assets/images/person2.jpg'),
-                                        ),
-                                   ),
-      
-                                   ClipRRect(borderRadius: BorderRadius.circular(25),
-                                      child: const CircleAvatar(
-                                      backgroundColor: Colors.amber, 
-                                      radius: 25, 
-                                     foregroundImage: NetworkImage('assets/images/person2.jpg'),
-                                    ),
-                                   ),
-                                   const Spacer(),
-                                   Container(
-                                     height: 25,
-                                     width: 80,
-                                     color: AppColors.primaryBg,
-                                     child: Center(
-                                       child: Text(
-                                         '100%',
-                                         style: TextStyle(
-                                         color: AppColors.primaryText, 
-                                         ),
-                                     ),
-                                    ),
-                                   ),
-                                      ],
-                                    ),
-                                    const Spacer(),
-                                  Container(
-                                     height: 25,
-                                     width: 80,
-                                     color: AppColors.primaryBg,
-                                     child: Center(
-                                       child: Text(
-                                         '10/10 Task',
-                                         style: TextStyle(
-                                         color: AppColors.primaryText, 
-                                          ),
-                                        ),
-                                      ),
-                                   ),
-                                   Text(
-                                   'Mobile Programming', 
-                                   style: TextStyle(
-                                     color: AppColors.primaryText, 
-                                     fontSize: 20),
-                                     ),
-                                     Text(
-                                   'Deadline 2 hari lagi', 
-                                   style: TextStyle(
-                                     color: AppColors.primaryText, 
-                                     fontSize: 15),
-                                     ),
-                                  ],),
-                              ),
-                            ],
-                            ),
-                          ),
+                        MyTask(),
                         
                           ],
                         ),
