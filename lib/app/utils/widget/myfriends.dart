@@ -50,8 +50,8 @@ class MyFriends extends StatelessWidget {
                   shrinkWrap: true,
                   itemCount: 8,
                   gridDelegate: 
-                  const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3, 
+                  SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: context.isPhone ? 2 : 3, 
                     crossAxisSpacing: 20,
                     mainAxisSpacing: 20), 
                   itemBuilder: (context, index){
