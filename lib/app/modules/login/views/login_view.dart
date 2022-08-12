@@ -8,6 +8,7 @@ import 'package:task_management_app/app/routes/app_pages.dart';
 import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
+  // final authC = Get.find<AuthController>();
   final authC = Get.find<AuthController>();
   @override
   Widget build(BuildContext context) {

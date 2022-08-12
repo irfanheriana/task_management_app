@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:task_management_app/app/data/controller/auth_controller.dart';
 import 'package:task_management_app/app/routes/app_pages.dart';
 import 'package:task_management_app/app/utils/style/AppColors.dart';
 import 'package:task_management_app/app/utils/widget/header.dart';
@@ -14,6 +15,7 @@ import '../controllers/profile_controller.dart';
 class ProfileView extends GetView<ProfileController> {
 
   final GlobalKey<ScaffoldState> _drawerkey = GlobalKey();
+  final authC = Get.find<AuthController>();
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +70,7 @@ class ProfileView extends GetView<ProfileController> {
                   title: 'Sign Out',
                   content: const Text('Are you sure want to sign out?'),
                   cancel: ElevatedButton(onPressed: ()=>Get.back(), child: const Text('Cancel'),),
-                  confirm: ElevatedButton(onPressed: ()=>Get.toNamed(Routes.LOGIN)  , child: const Text('Sign Out'),)
+                  confirm: ElevatedButton(onPressed: ()=> authC.logout(), child: const Text('Sign Out'),)
                 ); 
               },
               
